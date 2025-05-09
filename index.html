@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zengjie Hu - Computer Science Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-color: #f9f9f9;
+            --text-color: #333;
+            --light-gray: #ecf0f1;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            border-bottom: 2px solid var(--light-gray);
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-item i {
+            margin-right: 5px;
+            color: var(--secondary-color);
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--light-gray);
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .education-item, .project-item {
+            margin-bottom: 25px;
+        }
+        
+        .education-header, .project-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        
+        .institution, .project-title {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .degree, .project-tech {
+            font-style: italic;
+            color: #555;
+        }
+        
+        .date {
+            color: #777;
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .skill-category {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .skill-category h3 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 5px;
+        }
+        
+        .project-links {
+            margin-top: 10px;
+        }
+        
+        .project-links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .education-header, .project-header {
+                flex-direction: column;
+            }
+            
+            .date {
+                margin-top: 5px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Zengjie Hu</h1>
+            <p>23 years old | Computer Science Researcher</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+86-18339457964</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>huzengjie@stu.pku.edu.cn</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Beijing, China</span>
+                </div>
+            </div>
+        </header>
+        
+        <section class="section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <div class="education-header">
+                    <div>
+                        <span class="institution">Peking University</span>
+                        <span class="degree">M.S. in Electronic Information (Software Engineering)</span>
+                    </div>
+                    <div class="date">Sep 2024 - Present</div>
+                </div>
+            </div>
+            
+            <div class="education-item">
+                <div class="education-header">
+                    <div>
+                        <span class="institution">Nanjing University</span>
+                        <span class="degree">B.S. in Computer Science and Technology</span>
+                    </div>
+                    <div class="date">Sep 2020 - Jun 2024</div>
+                </div>
+                <p>GPA: 4.02/5.00 (Top 5%)</p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Technical Projects</h2>
+            
+            <div class="project-item">
+                <div class="project-header">
+                    <span class="project-title">Blog System Development</span>
+                    <span class="project-tech">Django, Bootstrap5, SQLite, Nginx</span>
+                </div>
+                <ul>
+                    <li>Developed a full-stack blog system supporting multi-user content creation and management</li>
+                    <li>Implemented backend with Django framework and frontend with Bootstrap5</li>
+                    <li>Deployed on Alibaba Cloud ECS using Nginx and Gunicorn with SQLite database</li>
+                </ul>
+                <div class="project-links">
+                    <a href="#"><i class="fab fa-github"></i> View Code</a>
+                    <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                </div>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-header">
+                    <span class="project-title">C-like Language Compiler</span>
+                    <span class="project-tech">C, Flex, Bison, MIPS32</span>
+                </div>
+                <ul>
+                    <li>Implemented a compiler for C-like language from scratch including lexical, syntax, and semantic analysis</li>
+                    <li>Used Flex for lexical analysis and Bison for parsing, with cross-linked list symbol table</li>
+                    <li>Generated three-address intermediate code converted to MIPS32 assembly executable on SPIM Simulator</li>
+                    <li>Supported basic C features: variables, arrays, structs, functions, scoping, and type checking</li>
+                </ul>
+                <div class="project-links">
+                    <a href="#"><i class="fab fa-github"></i> View Code</a>
+                </div>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-header">
+                    <span class="project-title">i386 Processor Simulator</span>
+                    <span class="project-tech">C, Computer Architecture</span>
+                </div>
+                <ul>
+                    <li>Developed a software-based i386 system simulator in C</li>
+                    <li>Implemented ALU operations, instruction execution, program loading, cache mechanism</li>
+                    <li>Created memory management with segmentation/paging, interrupts and I/O functionality</li>
+                </ul>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-header">
+                    <span class="project-title">RISC-V Single-Cycle CPU System</span>
+                    <span class="project-tech">Verilog, RISC-V, FPGA</span>
+                </div>
+                <ul>
+                    <li>Designed and implemented a RISC-V single-cycle CPU with Verilog including registers, memory, datapath</li>
+                    <li>Integrated PS/2 keyboard and VGA display interfaces</li>
+                    <li>Successfully ran compiled operating system on FPGA development board</li>
+                </ul>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-header">
+                    <span class="project-title">NLP & Computer Vision Projects</span>
+                    <span class="project-tech">PyTorch, BERT, ResNet50</span>
+                </div>
+                <ul>
+                    <li>Fine-tuned BERT model on 180K Chinese sentences for sentiment analysis (94.66% test accuracy)</li>
+                    <li>Adapted pre-trained ResNet50 on CIFAR-10 achieving 94.73% classification accuracy</li>
+                    <li>Implemented distributed training on computing clusters</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Languages & Frameworks</h3>
+                    <ul>
+                        <li><strong>C/C++</strong>: Systems programming, algorithms</li>
+                        <li><strong>Python</strong>: ML/DL (PyTorch), web development</li>
+                        <li><strong>Java</strong>: Object-oriented programming</li>
+                        <li><strong>Verilog</strong>: Digital design, FPGA</li>
+                        <li><strong>Web</strong>: Django, Bootstrap, JavaScript</li>
+                        <li><strong>Big Data</strong>: Hadoop MapReduce</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Core Competencies</h3>
+                    <ul>
+                        <li>Data Structures & Algorithms</li>
+                        <li>Operating Systems</li>
+                        <li>Computer Networks</li>
+                        <li>Computer Architecture</li>
+                        <li>Compiler Design</li>
+                        <li>Database Systems</li>
+                        <li>Machine Learning</li>
+                        <li>Parallel Computing</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Language Proficiency</h3>
+                    <ul>
+                        <li><strong>English</strong>: 
+                            <br>CET-4: 632/710
+                            <br>CET-6: 542/710
+                            <br>Postgraduate Entrance Exam: 84/100
+                        </li>
+                        <li><strong>Chinese</strong>: Native</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <footer style="text-align: center; margin-top: 40px; color: #777; font-size: 0.9em;">
+            <p>© 2024 Zengjie Hu. All rights reserved.</p>
+            <div style="margin-top: 10px;">
+                <a href="#" style="color: var(--secondary-color); margin: 0 10px;"><i class="fab fa-github"></i></a>
+                <a href="#" style="color: var(--secondary-color); margin: 0 10px;"><i class="fab fa-linkedin"></i></a>
+                <a href="#" style="color: var(--secondary-color); margin: 0 10px;"><i class="fas fa-file-pdf"></i> Resume</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
