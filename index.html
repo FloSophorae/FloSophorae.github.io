@@ -35,6 +35,18 @@
             padding: 30px 0;
             border-bottom: 2px solid var(--light-gray);
             margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            margin: 0 auto 20px;
+            display: block;
         }
         
         h1 {
@@ -142,6 +154,11 @@
             .date {
                 margin-top: 5px;
             }
+            
+            .profile-photo {
+                width: 120px;
+                height: 120px;
+            }
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -149,6 +166,8 @@
 <body>
     <div class="container">
         <header>
+            <!-- Add your profile photo here -->
+            <img src="G:\rw\resume\asset\6V3A6319.jpg" alt="Zengjie Hu" class="profile-photo">
             <h1>Zengjie Hu</h1>
             <p>23 years old | Computer Science Researcher</p>
             <div class="contact-info">
