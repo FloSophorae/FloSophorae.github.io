@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zengjie Hu - Computer Science Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #333333; /* 深灰色用于标题 */
+            --secondary-color: #555555; /* 中等灰色用于副标题 */
+            --background-color: #f5f5f5; /* 页面背景色 */
+            --sidebar-color: #e0e0e0; /* 左侧栏浅灰色 */
+            --text-color: #000000; /* 纯黑色文字 */
+            --light-gray: #cccccc; /* 边框和分隔线颜色 */
+        }
+        
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif; /* 衬线字体 */
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        /* 左侧固定栏 */
+        .sidebar {
+            width: 250px;
+            background-color: var(--sidebar-color);
+            color: var(--text-color);
+            padding: 30px;
+            position: fixed;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 25px;
+        }
+        
+        .sidebar h1 {
+            color: var(--text-color);
+            margin-bottom: 3px;
+            text-align: center;
+            font-size: 1.5em;
+        }
+        
+        .contact-info {
+            width: 100%;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+        
+        .contact-item i {
+            margin-right: 10px;
+            color: var(--secondary-color);
+            width: 20px;
+            text-align: center;
+        }
+        
+        /* 右侧可滚动内容 */
+        .main-content {
+            flex: 1;
+            margin-left: 280px; /* 比侧边栏稍宽 */
+            padding: 40px;
+            max-width: 800px;
+            background-color: white; /* 纯白背景 */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--light-gray);
+            padding-bottom: 5px;
+            margin-top: 30px;
+            font-size: 1.3em;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .education-item, .project-item {
+            margin-bottom: 25px;
+        }
+        
+        .education-header, .project-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        
+        .institution, .project-title {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .degree, .project-tech {
+            font-style: italic;
+            color: var(--secondary-color);
+        }
+        
+        .date {
+            color: var(--secondary-color);
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .skill-category {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .skill-category h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .project-links {
+            margin-top: 10px;
+        }
+        
+        .project-links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .project-links a:hover {
+            text-decoration: underline;
+            color: var(--secondary-color);
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+                font-size: 0.9em;
+            }
+            
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding: 20px;
+            }
+            
+            .main-content {
+                margin-left: 0;
+                padding: 20px;
+            }
+            
+            .education-header, .project-header {
+                flex-direction: column;
+            }
+            
+            .date {
+                margin-top: 5px;
+            }
+            
+            .profile-photo {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- 左侧固定栏 -->
+    <div class="sidebar">
+        <img src="asset/6V3A6319.jpg" alt="Zengjie Hu" class="profile-photo">
+        <h1>Zengjie Hu(胡增杰)</h1>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-user"></i>
+                <span>23 years old</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>+86-18339457964</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>huzengjie@stu.pku.edu.cn</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Beijing, China</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Peking University</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 右侧可滚动内容 -->
+    <div class="main-content">
+        <section class="section">
+            <h2>About Me</h2>
+            <p>
+                I am a Master's student School of Software & Microelectronics at Peking University, specializing in Software Engineering. 
+                My research focuses on multimodal large language models and reinforcement learning. 
+                I have strong programming skills and experience in system development, machine learning, and computer architecture.
+            </p>
+        </section>
+        
+        <section class="section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <div class="education-header">
+                    <div>
+                        <span class="institution">Peking University</span>
+                        <span class="degree">M.S. in School of Software & Microelectronics</span>
+                    </div>
+                    <div class="date">Sep 2024 - Present</div>
+                </div>
+                <ul>
+                    <li>Research in DCML Group on multimodal large language models</li>
+                    <li>Coursework: Advanced Machine Learning, Distributed Systems, Computer Vision</li>
+                </ul>
+            </div>
+            
+            <div class="education-item">
+                <div class="education-header">
+                    <div>
+                        <span class="institution">Nanjing University</span>
+                        <span class="degree">B.S. in Computer Science and Technology</span>
+                    </div>
+                    <div class="date">Sep 2020 - Jun 2024</div>
+                </div>
+                <ul>
+                    <li>GPA: 4.02/5.00 (Top 5%)</li>
+                    <li>Outstanding Graduate Award</li>
+                    <li>Coursework: Algorithms, Operating Systems, Compilers, Computer Architecture</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Research Experience</h2>
+            <div class="project-item">
+                <div class="project-header">
+                    <span class="project-title">Multimodal Large Language Models Research</span>
+                    <span class="project-tech">PyTorch, Transformers, Distributed Training</span>
+                </div>
+                <div class="date">Oct 2024 - Present</div>
+                <ul>
+                    <li>Proposed Visual Token Scaling with Verification (VTS-V) framework for multi-step visual reasoning</li>
+                    <li>Implemented Reasoner and Verifier components using PyTorch with multi-step DPO training</li>
+                    <li>Constructed VTS-SFT and VTS-DPO datasets with 315K high-quality reasoning trajectories</li>
+                    <li>Achieved state-of-the-art performance on BLINK benchmark (6.9% improvement over GPT-4o)</li>
+                    <li>Optimized distributed training on 8×A800 GPU cluster</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Technical Projects</h2>
+            
+            <div class="project-item">
+                <div class="project-header">
+                    <span class="project-title">Blog System Development</span>
+                    <span class="project-tech">Django, Bootstrap5, SQLite, Nginx</span>
+                </div>
+                <ul>
+                    <li>Developed a full-stack blog system supporting multi-user content creation and management</li>
+                    <li>Implemented backend with Django framework and frontend with Bootstrap5</li>
+                    <li>Deployed on Alibaba Cloud ECS using Nginx and Gunicorn with SQLite database</li>
+                </ul>
+                <div class="project-links">
+                    <a href="#"><i class="fab fa-github"></i> View Code</a>
+                    <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                </div>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-header">
+                    <span class="project-title">C-like Language Compiler</span>
+                    <span class="project-tech">C, Flex, Bison, MIPS32</span>
+                </div>
+                <ul>
+                    <li>Implemented a compiler for C-like language from scratch including lexical, syntax, and semantic analysis</li>
+                    <li>Used Flex for lexical analysis and Bison for parsing, with cross-linked list symbol table</li>
+                    <li>Generated three-address intermediate code converted to MIPS32 assembly executable on SPIM Simulator</li>
+                </ul>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-header">
+                    <span class="project-title">i386 Processor Simulator</span>
+                    <span class="project-tech">C, Computer Architecture</span>
+                </div>
+                <ul>
+                    <li>Developed a software-based i386 system simulator in C</li>
+                    <li>Implemented ALU operations, instruction execution, program loading, cache mechanism</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Languages & Frameworks</h3>
+                    <ul>
+                        <li><strong>C/C++</strong>: Systems programming, algorithms</li>
+                        <li><strong>Python</strong>: ML/DL (PyTorch), web development</li>
+                        <li><strong>Java</strong>: Object-oriented programming</li>
+                        <li><strong>Verilog</strong>: Digital design, FPGA</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Core Competencies</h3>
+                    <ul>
+                        <li>Machine Learning & Deep Learning</li>
+                        <li>Computer Vision</li>
+                        <li>Natural Language Processing</li>
+                        <li>Distributed Systems</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

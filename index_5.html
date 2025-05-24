@@ -6,32 +6,32 @@
     <title>Zengjie Hu - Computer Science Portfolio</title>
     <style>
         :root {
-            --primary-color: #333333;
-            --secondary-color: #555555;
-            --background-color: #f5f5f5;
-            --sidebar-color: #e0e0e0;
-            --text-color: #000000;
-            --light-gray: #cccccc;
+            --primary-color: #333333; /* 深灰色用于标题 */
+            --secondary-color: #555555; /* 中等灰色用于副标题 */
+            --background-color: #f5f5f5; /* 页面背景色 */
+            --sidebar-color: #e0e0e0; /* 左侧栏浅灰色 */
+            --text-color: #000000; /* 纯黑色文字 */
+            --light-gray: #cccccc; /* 边框和分隔线颜色 */
+            --link-color: #cfe6ee;
         }
         
         body {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            line-height: 1.8;
+            font-family: Georgia, 'Times New Roman', Times, serif; /* 衬线字体 */
+            line-height: 1.6;
             color: var(--text-color);
             background-color: var(--background-color);
             margin: 0;
             padding: 0;
             display: flex;
             min-height: 100vh;
-            font-size: 18px;
         }
         
         /* 左侧固定栏 */
         .sidebar {
-            width: 300px;
+            width: 250px;
             background-color: var(--sidebar-color);
             color: var(--text-color);
-            padding: 20px;
+            padding: 30px;
             position: fixed;
             height: 100vh;
             display: flex;
@@ -41,18 +41,18 @@
         }
         
         .profile-photo {
-            width: 200px;
-            height: 200px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             object-fit: cover;
             border: 5px solid white;
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
         
         .sidebar h1 {
             color: var(--text-color);
-            margin-bottom: 10px;
+            margin-bottom: 3px;
             text-align: center;
             font-size: 1.5em;
         }
@@ -64,9 +64,8 @@
         .contact-item {
             display: flex;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             color: var(--text-color);
-            font-size: 1em;
         }
 
         .contact-link {
@@ -77,26 +76,26 @@
 
         .contact-link:hover {
             text-decoration: underline;
+            /* color: var(--link-color); 或者您喜欢的任何悬停颜色 */
         }
                 
         .contact-item i {
-            margin-right: 15px;
+            margin-right: 10px;
             color: var(--secondary-color);
             width: 20px;
             text-align: center;
-            font-size: 1.1em;
         }
         
         /* 右侧可滚动内容 */
         .main-content {
             flex: 1;
-            margin-left: 320px;
-            padding: 50px;
-            max-width: 850px;
-            background-color: white;
+            margin-left: 280px; /* 比侧边栏稍宽 */
+            padding: 40px;
+            max-width: 800px;
+            background-color: white; /* 纯白背景 */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
         }
-        
+
         h1 {
             color: var(--primary-color);
             font-size: 2em;
@@ -107,66 +106,44 @@
         
         h2 {
             color: var(--primary-color);
-            font-size: 1.5em;
-            margin-top: 40px;
-            margin-bottom: 20px;
             border-bottom: 1px solid var(--light-gray);
-            padding-bottom: 8px;
+            padding-bottom: 5px;
+            margin-top: 30px;
+            font-size: 1.3em;
         }
         
         .section {
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
         
         .education-item, .project-item {
-            margin-bottom: 30px;
-            padding-left: 20px;
-            border-left: 3px solid var(--light-gray);
+            margin-bottom: 25px;
         }
         
         .education-header, .project-header {
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
         
         .institution, .project-title {
             font-weight: bold;
             color: var(--primary-color);
-            font-size: 1.2em;
         }
         
         .degree, .project-tech {
             font-style: italic;
             color: var(--secondary-color);
-            margin: 0 15px;
-        }
-        
-        .project-links {
-            font-size: 0.9em;
-        }
-        
-        .project-links a {
-            color: var(--primary-color);
-            text-decoration: none;
-            margin-left: 10px;
-        }
-        
-        .project-links a:hover {
-            text-decoration: underline;
-            color: var(--secondary-color);
         }
         
         .date {
             color: var(--secondary-color);
-            font-size: 0.95em;
         }
         
         .skills-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 30px;
+            gap: 20px;
         }
         
         .skill-category {
@@ -176,8 +153,8 @@
         
         .skill-category h3 {
             color: var(--primary-color);
-            margin-bottom: 15px;
-            font-size: 1.2em;
+            margin-bottom: 10px;
+            font-size: 1.1em;
         }
         
         ul {
@@ -185,32 +162,56 @@
         }
         
         li {
-            margin-bottom: 12px;
-            font-size: 1em;
+            margin-bottom: 8px;
+        }
+        
+        /* .project-links {
+            margin-top: 10px;
+        } */
+        
+        .project-links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .project-links a:hover {
+            text-decoration: underline;
+            color: var(--secondary-color);
         }
         
         /* 响应式设计 */
-        @media (max-width: 992px) {
+        @media (max-width: 768px) {
             body {
                 flex-direction: column;
-                font-size: 16px;
+                font-size: 0.9em;
             }
             
             .sidebar {
                 position: relative;
                 width: 100%;
                 height: auto;
-                padding: 30px;
+                padding: 20px;
             }
             
             .main-content {
                 margin-left: 0;
-                padding: 30px;
+                padding: 20px;
+            }
+            
+            .education-header, .project-header {
+                flex-direction: column;
+            }
+            
+            .date {
+                margin-top: 5px;
             }
             
             .profile-photo {
-                width: 150px;
-                height: 150px;
+                width: 120px;
+                height: 120px;
             }
         }
     </style>
@@ -247,7 +248,7 @@
         <section class="section">
             <h1>About Me</h1>
             <p>
-                I am a Master's student at School of Software & Microelectronics, Peking University, specializing in Software Engineering. 
+                I am a Master's student School of Software & Microelectronics at Peking University, specializing in Software Engineering. 
                 My research focuses on multimodal large language models and reinforcement learning. 
                 I have strong programming skills and experience in system development, machine learning, and computer architecture.
             </p>
@@ -255,76 +256,78 @@
         
         <section class="section">
             <h1>Education</h1>
-            <ul>
-                <li>
+            <div class="education-item">
+                <div class="education-header">
                     <div>
                         <span class="institution">Peking University</span>
                         <span class="degree">M.S. in School of Software & Microelectronics</span>
-                        <span class="date">2024/09 - Present</span>
                     </div>
-                </li>
-                <li>
+                    <div class="date">Sep 2024 - Present</div>
+                </div>
+            </div>
+            
+            <div class="education-item">
+                <div class="education-header">
                     <div>
                         <span class="institution">Nanjing University</span>
                         <span class="degree">B.S. in Department of Computer Science and Technology</span>
-                        <span>2020/09 - 2024/06</span>
                     </div>
-                </li>
-            </ul>
-            
+                    <div class="date">Sep 2020 - Jun 2024</div>
+                </div>
+            </div>
         </section>
         
         <section class="section">
-            <h1>Research Experience</h1>
-            <ul>
-                <li>
-                    <div class="project-header">
-                        <span class="institution">Peking University, DCML Group</span>
-                        <span class="date">2024/10 - Present</span>
-                    </div>
-                </li>
-            </ul>
+            <h1>Intern & Work Experience</h1>
+            <div class="project-item">
+                <div class="project-header">
+                    <span class="institution">Data-centric Machine Learning Group (DCML), Peking University</span>
+                    <span class="date">Oct 2024 - Present</span>
+                </div>
+                <ul>
+                    
+                </ul>
+            </div>
         </section>
         
         <section class="section">
             <h1>Technical Projects</h1>
             
-            <ul>
-                <li>
-                    <div class="project-header">
-                        <span class="project-title">Blog System Development</span>
-                        <span class="project-tech">Django, Bootstrap5, SQLite, Nginx</span>
-                        <span class="project-links">
-                            <a href="https://github.com/FloSophorae/blogweb"><i class="fab fa-github"></i> Code</a>
-                        </span>
-                    </div>
-                    <ul>
-                        <li>Developed a full-stack blog system supporting multi-user content creation and management</li>
-                        <li>This system implements a Django backend paired with Bootstrap5 frontend components, utilizes SQLite for database operations, and is deployed on Alibaba Cloud ECS through an Nginx-Gunicorn stack for optimal performance.</li>
-                    </ul>
-                </li>
-                <li>
-                    <div class="project-header">
-                        <span class="project-title">C-like Language Compiler</span>
-                        <span class="project-tech">C, Flex, Bison, MIPS32</span>
-                        
-                    </div>
-                    <ul>
-                        <li>Implemented a C-like language compiler from scratch, supporting basic C syntax including arithmetic operations, variables, arrays, structures, functions, scoping, type checking and conversion.</li>
-                        <li>Utilized Flex for lexical analysis and Bison for parsing, constructed symbol tables using cross-linked lists for semantic analysis, generated three-address intermediate code which was then converted to MIPS32 assembly, achieving successful execution on the SPIM Simulator.</li>
-                    </ul>
-                </li>
-                <li>
-                    <div class="project-header">
-                        <span class="project-title">i386 Processor Simulator</span>
-                        <span class="project-tech">C, Computer Architecture</span>
-                    </div>
-                    <ul>
-                        <li>Developed a software-based i386 system simulator in C</li>
-                        <li>The implementation encompassed core processor functionalities including ALU operations, i386 instruction execution, program loading and runtime management, cache mechanisms, segmented/paged memory management, as well as interrupt handling and I/O operations.</li>
-                    </ul>
-                </li>
-            </ul>
+            <div class="project-item">
+                <div class="project-header">
+                    <span class="project-title">Blog System Development</span>
+                    <span class="project-tech">Django, Bootstrap5, SQLite, Nginx</span>
+                    <span class="project-links" href="https://github.com/FloSophorae/blogweb">View code</span>
+                </div>
+                <ul>
+                    <li>Developed a full-stack blog system supporting multi-user content creation and management</li>
+                    <li>Implemented backend with Django framework and frontend with Bootstrap5</li>
+                    <li>Deployed on Alibaba Cloud ECS using Nginx and Gunicorn with SQLite database</li>
+                </ul>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-header">
+                    <span class="project-title">C-like Language Compiler</span>
+                    <span class="project-tech">C, Flex, Bison, MIPS32</span>
+                </div>
+                <ul>
+                    <li>Implemented a compiler for C-like language from scratch including lexical, syntax, and semantic analysis</li>
+                    <li>Used Flex for lexical analysis and Bison for parsing, with cross-linked list symbol table</li>
+                    <li>Generated three-address intermediate code converted to MIPS32 assembly executable on SPIM Simulator</li>
+                </ul>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-header">
+                    <span class="project-title">i386 Processor Simulator</span>
+                    <span class="project-tech">C, Computer Architecture</span>
+                </div>
+                <ul>
+                    <li>Developed a software-based i386 system simulator in C</li>
+                    <li>Implemented ALU operations, instruction execution, program loading, cache mechanism</li>
+                </ul>
+            </div>
         </section>
         
         <section class="section">

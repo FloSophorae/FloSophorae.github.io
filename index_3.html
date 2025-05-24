@@ -16,19 +16,19 @@
         
         body {
             font-family: Georgia, 'Times New Roman', Times, serif;
-            line-height: 1.8;
+            line-height: 1.8; /* 增加行高 */
             color: var(--text-color);
             background-color: var(--background-color);
             margin: 0;
             padding: 0;
             display: flex;
             min-height: 100vh;
-            font-size: 18px;
+            font-size: 18px; /* 增大基础字体大小 */
         }
         
         /* 左侧固定栏 */
         .sidebar {
-            width: 300px;
+            width: 300px; /* 稍微加宽 */
             background-color: var(--sidebar-color);
             color: var(--text-color);
             padding: 20px;
@@ -41,7 +41,7 @@
         }
         
         .profile-photo {
-            width: 200px;
+            width: 200px; /* 增大照片尺寸 */
             height: 200px;
             border-radius: 50%;
             object-fit: cover;
@@ -54,7 +54,7 @@
             color: var(--text-color);
             margin-bottom: 10px;
             text-align: center;
-            font-size: 1.5em;
+            font-size: 1.8em; /* 增大标题字体 */
         }
         
         .contact-info {
@@ -64,7 +64,7 @@
         .contact-item {
             display: flex;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 20px; /* 增加间距 */
             color: var(--text-color);
             font-size: 1em;
         }
@@ -80,7 +80,7 @@
         }
                 
         .contact-item i {
-            margin-right: 15px;
+            margin-right: 15px; /* 增加图标间距 */
             color: var(--secondary-color);
             width: 20px;
             text-align: center;
@@ -90,7 +90,7 @@
         /* 右侧可滚动内容 */
         .main-content {
             flex: 1;
-            margin-left: 320px;
+            margin-left: 320px; /* 随侧边栏调整 */
             padding: 50px;
             max-width: 850px;
             background-color: white;
@@ -99,7 +99,7 @@
         
         h1 {
             color: var(--primary-color);
-            font-size: 2em;
+            font-size: 2em; /* 一级标题更大 */
             margin-bottom: 30px;
             border-bottom: 2px solid var(--light-gray);
             padding-bottom: 10px;
@@ -107,7 +107,7 @@
         
         h2 {
             color: var(--primary-color);
-            font-size: 1.5em;
+            font-size: 1.5em; /* 增大二级标题 */
             margin-top: 40px;
             margin-bottom: 20px;
             border-bottom: 1px solid var(--light-gray);
@@ -115,7 +115,13 @@
         }
         
         .section {
-            margin-bottom: 50px;
+            margin-bottom: 50px; /* 增加区块间距 */
+        }
+        
+        .education-list, .project-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
         }
         
         .education-item, .project-item {
@@ -124,20 +130,20 @@
             border-left: 3px solid var(--light-gray);
         }
         
-        .education-header, .project-header {
+        .project-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
             margin-bottom: 10px;
         }
         
-        .institution, .project-title {
+        .project-title {
             font-weight: bold;
             color: var(--primary-color);
             font-size: 1.2em;
         }
         
-        .degree, .project-tech {
+        .project-tech {
             font-style: italic;
             color: var(--secondary-color);
             margin: 0 15px;
@@ -244,113 +250,113 @@
     
     <!-- 右侧可滚动内容 -->
     <div class="main-content">
-        <section class="section">
-            <h1>About Me</h1>
-            <p>
-                I am a Master's student at School of Software & Microelectronics, Peking University, specializing in Software Engineering. 
-                My research focuses on multimodal large language models and reinforcement learning. 
-                I have strong programming skills and experience in system development, machine learning, and computer architecture.
-            </p>
-        </section>
+        <h1>About Me</h1>
+        <p>
+            I am a Master's student at School of Software & Microelectronics, Peking University, specializing in Software Engineering. 
+            My research focuses on multimodal large language models and reinforcement learning. 
+            I have strong programming skills and experience in system development, machine learning, and computer architecture.
+        </p>
         
-        <section class="section">
-            <h1>Education</h1>
-            <ul>
-                <li>
-                    <div>
-                        <span class="institution">Peking University</span>
-                        <span class="degree">M.S. in School of Software & Microelectronics</span>
-                        <span class="date">2024/09 - Present</span>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span class="institution">Nanjing University</span>
-                        <span class="degree">B.S. in Department of Computer Science and Technology</span>
-                        <span>2020/09 - 2024/06</span>
-                    </div>
-                </li>
-            </ul>
-            
-        </section>
-        
-        <section class="section">
-            <h1>Research Experience</h1>
-            <ul>
-                <li>
-                    <div class="project-header">
-                        <span class="institution">Peking University, DCML Group</span>
-                        <span class="date">2024/10 - Present</span>
-                    </div>
-                </li>
-            </ul>
-        </section>
-        
-        <section class="section">
-            <h1>Technical Projects</h1>
-            
-            <ul>
-                <li>
-                    <div class="project-header">
-                        <span class="project-title">Blog System Development</span>
-                        <span class="project-tech">Django, Bootstrap5, SQLite, Nginx</span>
-                        <span class="project-links">
-                            <a href="https://github.com/FloSophorae/blogweb"><i class="fab fa-github"></i> Code</a>
-                        </span>
-                    </div>
-                    <ul>
-                        <li>Developed a full-stack blog system supporting multi-user content creation and management</li>
-                        <li>This system implements a Django backend paired with Bootstrap5 frontend components, utilizes SQLite for database operations, and is deployed on Alibaba Cloud ECS through an Nginx-Gunicorn stack for optimal performance.</li>
-                    </ul>
-                </li>
-                <li>
-                    <div class="project-header">
-                        <span class="project-title">C-like Language Compiler</span>
-                        <span class="project-tech">C, Flex, Bison, MIPS32</span>
-                        
-                    </div>
-                    <ul>
-                        <li>Implemented a C-like language compiler from scratch, supporting basic C syntax including arithmetic operations, variables, arrays, structures, functions, scoping, type checking and conversion.</li>
-                        <li>Utilized Flex for lexical analysis and Bison for parsing, constructed symbol tables using cross-linked lists for semantic analysis, generated three-address intermediate code which was then converted to MIPS32 assembly, achieving successful execution on the SPIM Simulator.</li>
-                    </ul>
-                </li>
-                <li>
-                    <div class="project-header">
-                        <span class="project-title">i386 Processor Simulator</span>
-                        <span class="project-tech">C, Computer Architecture</span>
-                    </div>
-                    <ul>
-                        <li>Developed a software-based i386 system simulator in C</li>
-                        <li>The implementation encompassed core processor functionalities including ALU operations, i386 instruction execution, program loading and runtime management, cache mechanisms, segmented/paged memory management, as well as interrupt handling and I/O operations.</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-        
-        <section class="section">
-            <h1>Technical Skills</h1>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Languages & Frameworks</h3>
-                    <ul>
-                        <li><strong>C/C++</strong>: Systems programming, algorithms</li>
-                        <li><strong>Python</strong>: ML/DL (PyTorch), web development</li>
-                        <li><strong>Java</strong>: Object-oriented programming</li>
-                        <li><strong>Verilog</strong>: Digital design, FPGA</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Core Competencies</h3>
-                    <ul>
-                        <li>Machine Learning & Deep Learning</li>
-                        <li>Computer Vision</li>
-                        <li>Natural Language Processing</li>
-                        <li>Distributed Systems</li>
-                    </ul>
-                </div>
+        <h1>Education</h1>
+        <li class="education-item">
+            <div class="education-header">
+                <span class="institution">Peking University</span>
+                <span class="date">Sep 2024 - Present</span>
             </div>
-        </section>
+            <div class="degree">M.S. in School of Software & Microelectronics</div>
+        </li>
+        
+        <li >
+            <div class="education-header">
+                <span class="institution">Nanjing University</span>
+                <span class="date">Sep 2020 - Jun 2024</span>
+            </div>
+            <div class="degree">B.S. in Department of Computer Science and Technology</div>
+        </li>
+        
+        <h1>Research Experience</h1>
+        <ul class="project-list">
+            <li class="project-item">
+                <div class="project-header">
+                    <span class="project-title">Data-centric Machine Learning Group (DCML), Peking University</span>
+                    <span class="date">Oct 2024 - Present</span>
+                </div>
+                <ul>
+                    <li>Proposed Visual Token Scaling with Verification (VTS-V) framework for multi-step visual reasoning</li>
+                    <li>Implemented Reasoner and Verifier components using PyTorch with multi-step DPO training</li>
+                    <li>Constructed VTS-SFT and VTS-DPO datasets with 315K high-quality reasoning trajectories</li>
+                    <li>Achieved state-of-the-art performance on BLINK benchmark (6.9% improvement over GPT-4o)</li>
+                    <li>Optimized distributed training on 8×A800 GPU cluster</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <h1>Technical Projects</h1>
+        <ul class="project-list">
+            <li class="project-item">
+                <div class="project-header">
+                    <span class="project-title">Blog System</span>
+                    <span class="project-tech">Django, Bootstrap5, SQLite, Nginx</span>
+                    <span class="project-links">
+                        <a href="#"><i class="fab fa-github"></i> Code</a>
+                        <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    </span>
+                </div>
+                <ul>
+                    <li>Developed a full-stack blog system supporting multi-user content creation</li>
+                    <li>Implemented backend with Django and frontend with Bootstrap5</li>
+                    <li>Deployed on Alibaba Cloud ECS using Nginx and Gunicorn</li>
+                </ul>
+            </li>
+            
+            <li class="project-item">
+                <div class="project-header">
+                    <span class="project-title">C-like Language Compiler</span>
+                    <span class="project-tech">C, Flex, Bison, MIPS32</span>
+                    <span class="project-links">
+                        <a href="#"><i class="fab fa-github"></i> Code</a>
+                    </span>
+                </div>
+                <ul>
+                    <li>Implemented compiler for C-like language including lexical/syntax/semantic analysis</li>
+                    <li>Generated MIPS32 assembly executable on SPIM Simulator</li>
+                </ul>
+            </li>
+            
+            <li class="project-item">
+                <div class="project-header">
+                    <span class="project-title">i386 Processor Simulator</span>
+                    <span class="project-tech">C, Computer Architecture</span>
+                </div>
+                <ul>
+                    <li>Developed software-based i386 system simulator in C</li>
+                    <li>Implemented ALU operations, instruction execution, cache mechanism</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <h1>Technical Skills</h1>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Languages & Frameworks</h3>
+                <ul>
+                    <li><strong>C/C++</strong>: Systems programming, algorithms</li>
+                    <li><strong>Python</strong>: ML/DL (PyTorch), web development</li>
+                    <li><strong>Java</strong>: Object-oriented programming</li>
+                    <li><strong>Verilog</strong>: Digital design, FPGA</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Core Competencies</h3>
+                <ul>
+                    <li>Machine Learning & Deep Learning</li>
+                    <li>Computer Vision</li>
+                    <li>Natural Language Processing</li>
+                    <li>Distributed Systems</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
 </html>
