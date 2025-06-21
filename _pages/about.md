@@ -21,15 +21,16 @@ B.S. in Department of Computer Science and Technology <br>
 
 Intern & Work Experience
 ======
+- **Shanghai Artificial Laboratory, Shanghai, China** <br>
+*2025/06 - Present* <br>
+Position: Research Intern
+
 - **Peking University, Beijing, China** <br>
 *2024/10 - Present* <br>
 Position: Research Intern in [Prof. Wentao Zhang](https://zwt233.github.io/) 's [DCML Group](https://github.com/Open-DataFlow) <br>
 Publications:
   - [Multi-Step Visual Reasoning with Visual Tokens Scaling and Verification](https://arxiv.org/abs/2506.07235) (Co-first author, In submission)
 
-- **Shanghai Artificial Laboratory, Shanghai, China** <br>
-*2025/06 - Present* <br>
-Position: Research Intern
 
 Publications
 ======
