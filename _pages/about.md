@@ -14,10 +14,10 @@ Education
 ======
 - **Peking University** <br>
 Master's Student in School of Software & Microelectronics <br>
-2024/09 - Present
+*2024/09 - Present*
 - **Nanjing University** <br>
 B.S. in Department of Computer Science and Technology <br>
-2020/09 - 2024/06
+*2020/09 - 2024/06*
 
 Intern & Work Experience
 ======
