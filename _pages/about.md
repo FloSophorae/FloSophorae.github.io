@@ -25,8 +25,14 @@ Intern & Work Experience
 *2024/10 - Present* <br>
 Position: Research Intern in [Prof. Wentao Zhang](https://zwt233.github.io/) 's [DCML Group](https://github.com/Open-DataFlow) <br>
 Publications:
-  - [Multi-Step Visual Reasoning with Visual Tokens Scaling and Verification](https://arxiv.org/abs/2506.07235)
+  - [Multi-Step Visual Reasoning with Visual Tokens Scaling and Verification](https://arxiv.org/abs/2506.07235) (Co-first author, In submission)
 
 - **Shanghai Artificial Laboratory, Shanghai, China** <br>
 *2025/06 - Present* <br>
 Position: Research Intern
+
+Publications
+======
+- [Multi-Step Visual Reasoning with Visual Tokens Scaling and Verification](https://arxiv.org/abs/2506.07235) <br>
+  Tianyi Bai\*, **Zengjie Hu\***, Fupeng Sun\*, Jiantao Qiu, Yizhen Jiang, Guangxin He, Bohan Zeng, Conghui He, Binhang Yuan, Wentao Zhang <br>
+  (Co-first author, In submission)
