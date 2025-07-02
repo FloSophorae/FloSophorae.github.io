@@ -6,7 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am a Master’s Student at the School of Software and Microelectronics, Peking University, supervised by [Assoc. Prof. Jing Qi](https://www.ss.pku.edu.cn/teacherteam/teacherlist/1610-%E8%8D%86%E7%90%A6.html). Concurrently, I work as a research assistant at [PKU-DCML Group](https://github.com/Open-DataFlow), supervised by [Prof. Wentao Zhang](https://zwt233.github.io/).
+I am a Master’s Student at the School of Software and Microelectronics, Peking University, supervised by [Assoc. Prof. Jing Qi](https://www.ss.pku.edu.cn/teacherteam/teacherlist/1610-%E8%8D%86%E7%90%A6.html). Concurrently, I work as a research assistant at PKU-DCML Group, supervised by [Prof. Wentao Zhang](https://zwt233.github.io/).
 
 My research focuses on Multimodal Large Language Models and Reinforcement Learning.
 
